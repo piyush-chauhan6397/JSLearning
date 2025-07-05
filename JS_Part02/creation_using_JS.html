@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:white;">
+    
+</body>
+<script>
+    let a=document.createElement('div')
+    a.className='days'
+    a.id=Math.round(Math.random()*100 +1)
+    a.setAttribute('title','learn')
+    console.log(a.innerHTML)
+    // a.innerHTML="Hey Ia am js dev"
+    let addtxt=document.createTextNode('Cahi code')
+    a.appendChild(addtxt)
+    document.body.appendChild(a)
+    a.style.color='green'
+
+
+</script>
+</html>
