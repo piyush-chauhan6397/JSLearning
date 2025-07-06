@@ -6,11 +6,37 @@
     <title>Document</title>
 </head>
 <body style="background-color: black; color:white;">
-    
+    <ul class="language">
+        <li>Java Script</li>
+    </ul>
 </body>
 <script>
-    
+    function addlanguage(language){
+        const newel=document.createElement('li');
+        newel.innerText=`${language}`
+        document.querySelector('.language').appendChild(newel)
+    }
+    addlanguage("Python");
 
+    function optaddlanguage(language){
+        const newel=document.createElement('li');
+        newel.appendChild(document.createTextNode(language));
+        document.querySelector('.language').appendChild(newel);
+    }
+    optaddlanguage("TypeScript");
 
+    //edit
+    const previel=document.querySelector('li:nth-child(2)')
+    const newel=document.createElement('li')
+    newel.appendChild(document.createTextNode("SQL"));
+    previel.replaceWith(newel);
+
+    const firstchange=document.querySelector('li:first-child');
+    firstchange.outerHTML="<li>CSS</li>"
+
+    //remove
+    const reel=document.querySelector('li:first-child')
+    reel.remove();
+    console.log(document.querySelector('ul:first-child'))
 </script>
 </html>
